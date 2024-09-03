@@ -25,7 +25,7 @@ This Flask application is designed to classify resumes into various job categori
 1. **Clone the Repository**
 
 ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/hm-badhon/Professional-Resume-Scanner-Application.git
    cd your-repo-name
 ```
 
