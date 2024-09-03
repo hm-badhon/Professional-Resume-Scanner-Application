@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Resume Screening App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Add this inside the <head> section of index.html -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const fileInput = document.getElementById('file');
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files.length > 0) {
+                document.querySelector('.submit-button').disabled = false;
+            } else {
+                document.querySelector('.submit-button').disabled = true;
+            }
+        });
+    });
+    </script>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Resume Screening App</h1>
+        <form method="post" enctype="multipart/form-data" class="upload-form">
+            <label for="file" class="file-label">Upload Your Resume:</label>
+            <input type="file" id="file" name="file" class="file-input" required>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        {% if prediction %}
+            <div class="result">
+                <h2>Predicted Category:</h2>
+                <p>{{ prediction }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
