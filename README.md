@@ -1,1 +1,0 @@
-# Professional-Resume-Scanner-Application
